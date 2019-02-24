@@ -1,0 +1,62 @@
+{
+  "project_info": {
+    "project_number": "367680748600",
+    "firebase_url": "https://aspenny-b8b10.firebaseio.com",
+    "project_id": "aspenny-b8b10",
+    "storage_bucket": "aspenny-b8b10.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:367680748600:android:f736e2bc92624e78",
+        "android_client_info": {
+          "package_name": "io.blazeq.aspenny"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "367680748600-r70r33i7qnmoi3qvbnp3isfslvf1j2lv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "io.blazeq.aspenny",
+            "certificate_hash": "4ccd3a040adde9dd71e4aff42631b7fef57bda6f"
+          }
+        },
+        {
+          "client_id": "367680748600-ptbhtgu81ldn7p0orrqf76keoqbe5pp5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyANzCSMX2h56hvymkn5WfgEocQd_vfMjDU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "367680748600-ptbhtgu81ldn7p0orrqf76keoqbe5pp5.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "367680748600-171g72l9me5hplt055pcpskm11rb1l5d.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.3eekend.AestheticsOfPennies"
+              }
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

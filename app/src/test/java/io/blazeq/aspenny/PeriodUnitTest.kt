@@ -10,8 +10,15 @@ import org.junit.Test
 
 class PeriodUnitTest {
     @Test
-    fun test_of() {
+    fun test_of01() {
         val period = Period.of(2500.milliseconds)
+        assertEquals(2, period.seconds)
+        assertEquals(500, period.milliseconds)
+    }
+
+    @Test
+    fun test_of02() {
+        val period = Period.of(1.seconds + 1500.milliseconds)
         assertEquals(2, period.seconds)
         assertEquals(500, period.milliseconds)
     }

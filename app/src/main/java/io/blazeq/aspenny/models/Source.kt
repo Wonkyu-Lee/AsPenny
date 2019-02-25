@@ -19,6 +19,7 @@ data class Source (
     constructor(): this("unknown", 0.0, 0.0, now().toStr())
 
     companion object {
+        // TODO: durationDays를 Interval로 바꾸자.
         fun cigarette(durationDays: Long, amountPerDay: Double, unitPrice: Double): Source {
             return create("cigarette", durationDays, amountPerDay, unitPrice)
         }

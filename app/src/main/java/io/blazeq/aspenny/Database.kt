@@ -1,22 +1,14 @@
 package io.blazeq.aspenny
 
 import com.google.firebase.database.FirebaseDatabase
-import io.blazeq.aspenny.model.Source
-import io.blazeq.aspenny.model.User
+import io.blazeq.aspenny.models.Source
 
 object Database {
+    private const val userKey = "-LZSyN_wqEojcm048lN0"
     private val root = FirebaseDatabase.getInstance().reference
     private val users = root.child("users")
-    private const val userKey = "-LZSyN_wqEojcm048lN0"
-    val user = users.child(userKey)
-    val sources = user.child("sources")
-
-    fun addUser() {
-        val key = users.push().key
-        if (key != null) {
-            users.child(key).setValue(User(key))
-        }
-    }
+    private val user = users.child(userKey)
+    private val sources = user.child("sources")
 
     fun addItem(source: Source) {
         val key = sources.push().key

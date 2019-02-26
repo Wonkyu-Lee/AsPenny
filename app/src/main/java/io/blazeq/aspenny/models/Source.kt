@@ -1,8 +1,7 @@
 package io.blazeq.aspenny.models
 
 import com.google.firebase.database.Exclude
-import com.kizitonwose.time.days
-import com.kizitonwose.time.minus
+import com.kizitonwose.time.*
 import io.blazeq.aspenny.timeutils.Period
 import io.blazeq.aspenny.timeutils.now
 import io.blazeq.aspenny.timeutils.toCal
@@ -19,17 +18,16 @@ data class Source (
     constructor(): this("unknown", 0.0, 0.0, now().toStr())
 
     companion object {
-        // TODO: durationDays를 Interval로 바꾸자.
-        fun cigarette(durationDays: Long, amountPerDay: Double, unitPrice: Double): Source {
-            return create("cigarette", durationDays, amountPerDay, unitPrice)
+        fun cigarette(duration: Interval<out TimeUnit>, amountPerDay: Double, unitPrice: Double): Source {
+            return create("cigarette", duration, amountPerDay, unitPrice)
         }
 
         fun cigarette(amountPerDay: Double, unitPrice: Double): Source {
             return create("cigarette", amountPerDay, unitPrice)
         }
 
-        private fun create(type: String, durationDays: Long, amountPerDay: Double, unitPrice: Double): Source {
-            val start = now() - durationDays.days
+        private fun create(type: String, duration: Interval<out TimeUnit>, amountPerDay: Double, unitPrice: Double): Source {
+            val start = now() - duration
             return Source(type, unitPrice, amountPerDay, start.toStr())
         }
 

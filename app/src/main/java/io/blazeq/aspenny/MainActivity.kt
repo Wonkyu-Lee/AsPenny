@@ -11,10 +11,5 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        btn_add_user.setOnClickListener {
-            val item = Source.cigarette(10.days, 10.0, 1000.0)
-            Database.addItem(item)
-        }
     }
 }
